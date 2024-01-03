@@ -13,6 +13,11 @@ import (
 var assets embed.FS
 
 func main() {
+
+	anyNoteX.InitializeDb()
+
+	defer anyNoteX.CloseDb()
+
 	// Create an instance of the app structure
 	app := NewApp()
 
